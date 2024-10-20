@@ -6,8 +6,9 @@ def report_count(target):
       line = line.strip()
       line = line.lower()
       words = line.split(" ")
+      print(words)
       #counting occurrences of target word
       for i in words:
         if (i == target):
           count += 1
-  print("The term ",target," shows up in the corpus ",count," times.")
+    print("The term ",target," shows up in the corpus ",count," times.")
