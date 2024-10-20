@@ -1,9 +1,11 @@
+import string
+
 def report_count(target):
   count = 0
   with open("corpus.txt", "r") as n:
     for line in n:
       #cleaning the text
-      line = line.strip()
+      line = line.translate(str.maketrans('', '',string.punctuation))
       line = line.lower()
       words = line.split(" ")
       print(words)
